@@ -12,6 +12,7 @@ This app is developed using Flutter framework!
 - [x] Choose number of sets, aka rounds of the exercises!
 - [x] Each set has 5 exercises!
 - [x] Ability to see number of exercises the app selected!
+- [x] Break of 40 seconds between every two exercises!
 - [ ] Play music during a workout!
 - [ ] Stop music during a break!
 - [ ] Different music for each exercise!

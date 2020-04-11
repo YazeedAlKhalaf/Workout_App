@@ -13,3 +13,19 @@ modeToString(Mode mode) {
       break;
   }
 }
+
+enum EType {
+  exerciseType,
+  breakType,
+}
+
+eTypeToString(EType eType) {
+  switch (eType) {
+    case EType.exerciseType:
+      return "exercise";
+      break;
+    case EType.breakType:
+      return "break";
+      break;
+  }
+}

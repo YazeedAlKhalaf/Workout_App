@@ -32,8 +32,10 @@ class WorkoutsProvider extends BaseProvider {
     for (int i = 0; i < 5; i++) {
       Exercise randomExercise = getRandomExercise(withoutChosenExercisesList);
       listOfFive.add(randomExercise);
+      listOfFive.add(breakExercise);
       withoutChosenExercisesList.remove(randomExercise);
     }
+    listOfFive.removeLast();
     return listOfFive;
   }
 

@@ -1,5 +1,7 @@
 import 'package:workout_app/src/models/exercise_model.dart';
 
+import 'enums.dart';
+
 // TODO: make the exercises more realistic!
 
 final exercisesList = [
@@ -117,58 +119,96 @@ final exercisesList = [
   ),
 ];
 
+final Exercise breakExercise = Exercise(
+  id: "break",
+  name: "BREAK",
+  image: 'assets/images/misc/welcome.png',
+  duration: Duration(
+    seconds: 40,
+  ),
+  type: EType.breakType,
+);
+
 final exercisesSunday = [
   exercisesList[0],
+  breakExercise,
   exercisesList[5],
+  breakExercise,
   exercisesList[10],
+  breakExercise,
   exercisesList[8],
+  breakExercise,
   exercisesList[13],
 ];
 
 final exercisesMonday = [
   exercisesList[5],
+  breakExercise,
   exercisesList[9],
+  breakExercise,
   exercisesList[0],
+  breakExercise,
   exercisesList[6],
+  breakExercise,
   exercisesList[3],
 ];
 
 final exercisesTuesday = [
   exercisesList[6],
+  breakExercise,
   exercisesList[5],
+  breakExercise,
   exercisesList[8],
+  breakExercise,
   exercisesList[11],
+  breakExercise,
   exercisesList[12],
 ];
 
 final exercisesWednesday = [
   exercisesList[4],
+  breakExercise,
   exercisesList[0],
+  breakExercise,
   exercisesList[6],
+  breakExercise,
   exercisesList[8],
+  breakExercise,
   exercisesList[10],
 ];
 
 final exercisesThursday = [
   exercisesList[9],
+  breakExercise,
   exercisesList[8],
+  breakExercise,
   exercisesList[6],
+  breakExercise,
   exercisesList[3],
+  breakExercise,
   exercisesList[0],
 ];
 
 final exercisesFriday = [
   exercisesList[6],
+  breakExercise,
   exercisesList[0],
+  breakExercise,
   exercisesList[8],
+  breakExercise,
   exercisesList[4],
+  breakExercise,
   exercisesList[11],
 ];
 
 final exercisesSaturday = [
   exercisesList[9],
+  breakExercise,
   exercisesList[8],
+  breakExercise,
   exercisesList[7],
+  breakExercise,
   exercisesList[13],
+  breakExercise,
   exercisesList[5],
 ];
