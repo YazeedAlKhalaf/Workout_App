@@ -1,7 +1,43 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:workout_app/src/constants/enums.dart';
+import 'package:workout_app/src/constants/keys.dart';
 
 class SharedPrefsService {
-  Future saveValue(String key, var content) async {
+  String _mode;
+  String get mode => _mode;
+
+  int _setsNumber;
+  int get setsNumber => _setsNumber;
+
+  getMode() async {
+    var mode = await _getValue(modeKey);
+    _mode = mode;
+  }
+
+  saveMode(Mode mode) async {
+    String modeToSave = modeToString(mode);
+    _mode = modeToSave;
+    await _saveValue(
+      modeKey,
+      modeToSave,
+    );
+  }
+
+  getSetsNumber() async {
+    var setsNumber = await _getValue(setsNumberKey);
+    _setsNumber = setsNumber;
+  }
+
+  saveSetsNumber(int setsNumber) async {
+    int setsNumberToSave = setsNumber;
+    _setsNumber = setsNumberToSave;
+    await _saveValue(
+      setsNumberKey,
+      setsNumberToSave,
+    );
+  }
+
+  Future _saveValue(String key, var content) async {
     final SharedPreferences _sharedPreferences =
         await SharedPreferences.getInstance();
     print('(TRACE) LocalStorageService:_saveToDisk. key: $key value: $content');
@@ -23,7 +59,7 @@ class SharedPrefsService {
     }
   }
 
-  Future getValue(String key) async {
+  Future _getValue(String key) async {
     final SharedPreferences _sharedPreferences =
         await SharedPreferences.getInstance();
     var value = await _sharedPreferences.get(key);

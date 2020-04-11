@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider_architecture/provider_architecture.dart';
-import 'package:workout_app/constants/enums.dart';
+import 'package:workout_app/src/constants/enums.dart';
 import 'package:workout_app/src/providers/settings_provider.dart';
 import 'package:workout_app/src/ui/shared/app_colors.dart';
 import 'package:workout_app/src/ui/shared/ui_helpers.dart';
@@ -30,7 +30,7 @@ class _SettingsViewState extends State<SettingsView> {
                 )
               : Padding(
                   padding: EdgeInsets.all(
-                    screenWidth(context) * 0.05,
+                    blockSizeHorizontal(context) * 5,
                   ),
                   child: Center(
                     child: Column(
@@ -43,11 +43,11 @@ class _SettingsViewState extends State<SettingsView> {
                           style: TextStyle(
                             color: textColorBlack,
                             fontWeight: FontWeight.bold,
-                            fontSize: screenWidth(context) * 0.15,
+                            fontSize: blockSizeHorizontal(context) * 15,
                           ),
                         ),
                         SizedBox(
-                          height: screenWidth(context) * 0.2,
+                          height: blockSizeHorizontal(context) * 20,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -58,13 +58,13 @@ class _SettingsViewState extends State<SettingsView> {
                                 style: TextStyle(
                                   color: textColorWhite,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: screenWidth(context) * 0.07,
+                                  fontSize: blockSizeHorizontal(context) * 7,
                                 ),
                               ),
-                              radius: screenWidth(context) * 0.35,
+                              radius: blockSizeHorizontal(context) * 35,
                               onTap: () {
-                                provider.setMode(
-                                  Modes.random,
+                                provider.saveMode(
+                                  Mode.random,
                                 );
                               },
                             ),
@@ -75,13 +75,13 @@ class _SettingsViewState extends State<SettingsView> {
                                 style: TextStyle(
                                   color: textColorWhite,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: screenWidth(context) * 0.07,
+                                  fontSize: blockSizeHorizontal(context) * 7,
                                 ),
                               ),
-                              radius: screenWidth(context) * 0.35,
+                              radius: blockSizeHorizontal(context) * 35,
                               onTap: () {
-                                provider.setMode(
-                                  Modes.day_wise,
+                                provider.saveMode(
+                                  Mode.dayWise,
                                 );
                               },
                             ),

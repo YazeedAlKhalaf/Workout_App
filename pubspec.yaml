@@ -21,13 +21,29 @@ dependencies:
   giffy_dialog: ^1.7.0
   # provider architecture
   provider_architecture: ^1.0.6
+  # intro slider
+  intro_slider: ^2.2.9
+  # timer count down
+  timer_count_down: ^1.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  # flutter launcher icons
+  flutter_launcher_icons: ^0.7.4
+
+flutter_icons:
+  android: "launcher_icon" 
+  ios: true
+  image_path: "assets/images/misc/icon.png"
 
 flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/audio/
+    - assets/images/exercise/
+    - assets/images/gif/
+    - assets/images/misc/
+    

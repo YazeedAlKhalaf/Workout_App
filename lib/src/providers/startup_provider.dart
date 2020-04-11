@@ -1,15 +1,30 @@
-import 'package:workout_app/constants/keys.dart';
-import 'package:workout_app/constants/route_names.dart';
+import 'dart:async';
+
+import 'package:workout_app/src/constants/route_names.dart';
 import 'package:workout_app/src/providers/base_provider.dart';
 
 class StartupProvider extends BaseProvider {
   handleStartupLogic() async {
-    bool didChooseMode =
-        await sharedPrefsService.getValue(modeKey) == null ? false : true;
+    await sharedPrefsService.getMode();
+    bool didChooseMode = sharedPrefsService.mode == null ? false : true;
     if (didChooseMode) {
-      navigationService.navigateToAndRemoveUntill(HomeViewRoute);
+      Timer(
+        Duration(
+          seconds: 2,
+        ),
+        () => navigationService.navigateToAndRemoveUntill(
+          HomeViewRoute,
+        ),
+      );
     } else {
-      navigationService.navigateToAndRemoveUntill(SettingsViewRoute);
+      Timer(
+        Duration(
+          seconds: 2,
+        ),
+        () => navigationService.navigateToAndRemoveUntill(
+          WelcomeViewRoute,
+        ),
+      );
     }
   }
 }

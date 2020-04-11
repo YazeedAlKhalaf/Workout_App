@@ -28,7 +28,7 @@ class _AboutCreatorViewState extends State<AboutCreatorView> {
             child: Text(
               'About Creator',
               style: TextStyle(
-                fontSize: screenWidth(context) * 0.1,
+                fontSize: blockSizeHorizontal(context) * 10,
                 fontWeight: FontWeight.bold,
               ),
             ),

@@ -16,4 +16,7 @@ class BaseProvider extends ChangeNotifier {
     _busy = value;
     notifyListeners();
   }
+
+  String get mode => sharedPrefsService.mode;
+  int get setsNumber => sharedPrefsService.setsNumber;
 }

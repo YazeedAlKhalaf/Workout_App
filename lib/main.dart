@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:workout_app/managers/dialog_manager.dart';
+import 'package:workout_app/src/managers/dialog_manager.dart';
 import 'package:workout_app/src/locator.dart';
 import 'package:workout_app/src/services/dialog_service.dart';
 import 'package:workout_app/src/services/navigation_service.dart';
@@ -11,6 +11,10 @@ import 'package:workout_app/src/ui/views/startup_view.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIOverlays([]);
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp,
+  ]);
 
   setupLocator();
 
@@ -23,7 +27,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Workout App',
-      builder: (BuildContext context, Widget child) {
+      builder: (
+        BuildContext context,
+        Widget child,
+      ) {
         return Navigator(
           key: locator<DialogService>().dialogNavigationKey,
           onGenerateRoute: (RouteSettings settings) {
@@ -39,6 +46,7 @@ class MyApp extends StatelessWidget {
       },
       navigatorKey: locator<NavigationService>().navigationKey,
       theme: ThemeData(
+        primarySwatch: Colors.orange,
         primaryColor: primaryColor,
         backgroundColor: backgroundColor,
         scaffoldBackgroundColor: backgroundColor,

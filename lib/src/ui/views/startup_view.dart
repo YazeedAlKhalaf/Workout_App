@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider_architecture/provider_architecture.dart';
 import 'package:workout_app/src/providers/startup_provider.dart';
 import 'package:workout_app/src/ui/shared/app_colors.dart';
-import 'package:workout_app/src/ui/shared/ui_helpers.dart';
 
 class StartupView extends StatefulWidget {
   @override
@@ -28,9 +27,8 @@ class _StartupViewState extends State<StartupView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Image.asset(
-                'assets/logo_transparent.png',
+                'assets/images/misc/logo_transparent.png',
               ),
-              verticalSpaceSmall,
               CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation(
                   primaryColor,

@@ -22,42 +22,42 @@ class _HomeViewState extends State<HomeView> {
         return Scaffold(
           body: Padding(
             padding: EdgeInsets.all(
-              screenWidth(context) * 0.05,
+              blockSizeHorizontal(context) * 5,
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Align(
                   alignment: Alignment.topLeft,
                   child: Image.asset(
-                    'assets/12.png',
-                    width: screenWidth(context) * 0.6,
+                    'assets/images/exercise/12.png',
+                    width: blockSizeHorizontal(context) * 50,
                   ),
                 ),
                 SizedBox(
-                  height: screenWidth(context) * 0.05,
+                  height: blockSizeHorizontal(context) * 5,
                 ),
                 Text(
                   'Workout App',
                   style: TextStyle(
                     color: textColorBlack,
                     fontWeight: FontWeight.bold,
-                    fontSize: screenWidth(context) * 0.15,
+                    fontSize: blockSizeHorizontal(context) * 15,
                   ),
                 ),
                 SizedBox(
-                  height: screenWidth(context) * 0.1,
+                  height: blockSizeHorizontal(context) * 7,
                 ),
                 RaisedButton(
                   padding: EdgeInsets.symmetric(
-                    vertical: screenWidth(context) * 0.05,
-                    horizontal: screenWidth(context) * 0.3,
+                    vertical: blockSizeHorizontal(context) * 5,
+                    horizontal: blockSizeHorizontal(context) * 30,
                   ),
                   color: primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
-                      screenWidth(context),
+                      50,
                     ),
                   ),
                   child: Text(
@@ -65,16 +65,18 @@ class _HomeViewState extends State<HomeView> {
                     style: TextStyle(
                       color: textColorWhite,
                       fontWeight: FontWeight.bold,
-                      fontSize: screenWidth(context) * 0.1,
+                      fontSize: blockSizeHorizontal(context) * 10,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    provider.navigateToSetsNumberView();
+                  },
                 ),
                 Align(
                   alignment: Alignment.bottomRight,
                   child: Image.asset(
-                    'assets/8.png',
-                    width: screenWidth(context) * 0.6,
+                    'assets/images/exercise/8.png',
+                    width: blockSizeHorizontal(context) * 50,
                   ),
                 ),
               ],
@@ -83,9 +85,9 @@ class _HomeViewState extends State<HomeView> {
           bottomNavigationBar: Padding(
             padding: EdgeInsets.only(
               top: 0,
-              right: screenWidth(context) * 0.04,
-              left: screenWidth(context) * 0.04,
-              bottom: screenWidth(context) * 0.03,
+              right: blockSizeHorizontal(context) * 5,
+              left: blockSizeHorizontal(context) * 5,
+              bottom: blockSizeHorizontal(context) * 5,
             ),
             child: BottomAppBar(
               elevation: 0,
@@ -95,7 +97,7 @@ class _HomeViewState extends State<HomeView> {
                   IconButton(
                     icon: Icon(
                       Icons.info,
-                      size: screenWidth(context) * 0.1,
+                      size: blockSizeHorizontal(context) * 10,
                     ),
                     onPressed: () {
                       provider.navigateToAboutCreatorView();
@@ -104,7 +106,7 @@ class _HomeViewState extends State<HomeView> {
                   IconButton(
                     icon: Icon(
                       Icons.settings,
-                      size: screenWidth(context) * 0.1,
+                      size: blockSizeHorizontal(context) * 10,
                     ),
                     onPressed: () {
                       provider.navigateToSettingsView();

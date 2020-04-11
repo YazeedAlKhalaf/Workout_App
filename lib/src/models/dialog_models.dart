@@ -5,14 +5,14 @@ class DialogRequest {
   final String description;
   final String buttonTitle;
   final String cancelTitle;
-  final List<Widget> actions;
+  final String image;
 
   DialogRequest({
     @required this.title,
     @required this.description,
     @required this.buttonTitle,
     this.cancelTitle,
-    this.actions,
+    this.image,
   });
 }
 

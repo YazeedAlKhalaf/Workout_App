@@ -9,12 +9,11 @@ This app is developed using Flutter framework!
 
 - [x] Used Provider for state-managment!
 - [x] Ability to choose between Random and Day Wise Modes!
-- [ ] Choose number of sets, aka rounds of the exercises!
-- [ ] Each set has 5 exercises!
-- [ ] Ability to see number of exercises the app selected!
+- [x] Choose number of sets, aka rounds of the exercises!
+- [x] Each set has 5 exercises!
+- [x] Ability to see number of exercises the app selected!
 - [ ] Play music during a workout!
 - [ ] Stop music during a break!
-- [ ] Add a restart button, which can again select different exercises!
 - [ ] Different music for each exercise!
 - [ ] About Creator Screen with link to the challenge maker video!
 
